@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the code from GitHub
-        git url: 'https://github.com/Veerendra1233/Mac_repo.git', branch: 'master'
+        git url: 'https://github.com/Veerendra1233/Mac_repo.git', branch: 'main'
                 
 }
         }
