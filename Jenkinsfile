@@ -5,8 +5,9 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the code from GitHub
-git 'https://github.com/Veerendra1233/Mac_repo.git'               
-            }
+        git url: 'https://github.com/Veerendra1233/Mac_repo.git', branch: 'master'
+                
+}
         }
         
         stage('Deploy to Minikube') {
