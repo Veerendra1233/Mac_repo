@@ -1,6 +1,15 @@
 pipeline {
-    agent any
-    
+       agent {
+        docker {
+            image 'lachlanevenson/k8s-kubectl:v1.27.3'
+            args '-v $HOME/.kube:/root/.kube'  // Mount kubeconfig for Minikube
+        }
+    }
+
+    environment {
+        KUBECONFIG = '/root/.kube/config'
+    }
+ 
     stages {
         stage('Checkout') {
             steps {
